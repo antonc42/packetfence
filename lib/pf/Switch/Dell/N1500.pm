@@ -231,8 +231,9 @@ Get Voice over IP RADIUS Vendor Specific Attribute (VSA).
 
 sub getVoipVsa {
     my ($self) = @_;
-    return (
-    );
+    my $logger = $self->logger;
+
+    return ('Cisco-AVPair' => "device-traffic-class=voice");
 }
 
 =head2 deauthenticateMacRadius
